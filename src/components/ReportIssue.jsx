@@ -393,7 +393,7 @@ function ReportIssue() {
                     type="text"
                     value={formData.fullName}
                     onChange={handleFieldChange}
-                    placeholder="Ananya Sharma"
+                    placeholder="Enter your name"
                     aria-describedby={errors.fullName ? "fullName-error" : undefined}
                     aria-invalid={Boolean(errors.fullName)}
                     className={[
@@ -416,7 +416,7 @@ function ReportIssue() {
                     inputMode="numeric"
                     value={formData.mobile}
                     onChange={handleFieldChange}
-                    placeholder="98765 43210"
+                    placeholder="Enter valid mobile number"
                     aria-describedby={errors.mobile ? "mobile-error" : undefined}
                     aria-invalid={Boolean(errors.mobile)}
                     className={[
