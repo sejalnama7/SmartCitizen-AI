@@ -1,0 +1,39 @@
+.hero-marquee {
+  position: relative;
+}
+
+
+.hero-marquee-track {
+  animation: hero-marquee-scroll 45s linear infinite;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+.hero-marquee:hover .hero-marquee-track {
+  animation-play-state: paused;
+}
+
+.hero-marquee-group {
+  flex: 0 0 auto;
+}
+
+@keyframes hero-marquee-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-marquee-track {
+    animation: none;
+    transform: none;
+  }
+
+  .hero-marquee:hover .hero-marquee-track {
+    animation-play-state: running;
+  }
+}
