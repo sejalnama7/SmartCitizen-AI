@@ -69,7 +69,7 @@ function HeroIssueCard({ item, duplicated = false }) {
     >
       <div className="relative aspect-16/11 overflow-hidden">
         <img
-          src={item.image}
+          src={`${import.meta.env.BASE_URL}${item.image.replace(/^\//, "")}`}
           alt={item.alt}
           loading={duplicated ? "lazy" : "eager"}
           decoding="async"
